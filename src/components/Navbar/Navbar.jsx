@@ -16,6 +16,39 @@ const Navbar = () => {
                         <li className="text-secondary hover:text-primary cursor-pointer">About</li>
                         <li className="text-secondary hover:text-primary cursor-pointer">Contacts</li>
                         <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
+                        <li className="text-secondary hover:text-primary cursor-pointer">Journal</li>
                     </ul>
                 </div>
             </div>
