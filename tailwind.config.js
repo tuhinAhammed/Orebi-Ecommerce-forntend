@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       maxWidth : {
-        container : "80%"
+        container : "90%"
       },
       fontFamily : {
         dmSans : ["DM Sans"]
