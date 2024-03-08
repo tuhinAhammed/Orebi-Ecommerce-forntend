@@ -15,7 +15,8 @@ export default {
       colors : {
         primary : "#262626" ,
         secondary : "#767676" ,
-        tertiary : "#fff"
+        tertiary : "#fff" ,
+        quaternary : "#eee"
       }
     },
   },
