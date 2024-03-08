@@ -32,19 +32,20 @@ const Header = () => {
         <Container className="py-4">
         <Flex className="justify-between items-center" >
             <div  className='flex items-center gap-[10px] text-sm font-dmSans '>
-                <div className='' ref = {myRef} >
+                <div className='relative' ref = {myRef} >
                     <div className='flex items-center gap-[10px] text-sm font-dmSans'>
                         <RiBarChartHorizontalFill />
-                        <div className='text-primary'>Shop by Category</div>
+                        <div className='text-primary text-base'>Shop by Category</div>
                     </div>
                    {
                     show && (
-                        <ul className='absolute bg-[#eee] px-10 py-4' >
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
+                        <ul className='absolute bg-primary top-[50px] w-[263px] font-dmSans' >
+                        <li className='text-base py-[16px]  px-[21px]  border-b border-secondary ease-in duration-100 text-tertiary text-opacity-[70%] hover:text-tertiary hover:bold hover:pl-[30px] hover:text-opacity-[100%]'>Accesories</li>
+                        <li className='text-base py-[16px]  px-[21px]  border-b border-secondary ease-in duration-100 text-tertiary text-opacity-[70%] hover:text-tertiary hover:bold hover:pl-[30px] hover:text-opacity-[100%]'>Furniture</li>
+                        <li className='text-base py-[16px]  px-[21px]  border-b border-secondary ease-in duration-100 text-tertiary text-opacity-[70%] hover:text-tertiary hover:bold hover:pl-[30px] hover:text-opacity-[100%]'>Electronics</li>
+                        <li className='text-base py-[16px]  px-[21px]  border-b border-secondary ease-in duration-100 text-tertiary text-opacity-[70%] hover:text-tertiary hover:bold hover:pl-[30px] hover:text-opacity-[100%]'>Clothes</li>
+                        <li className='text-base py-[16px]  px-[21px]  border-b border-secondary ease-in duration-100 text-tertiary text-opacity-[70%] hover:text-tertiary hover:bold hover:pl-[30px] hover:text-opacity-[100%]'>Bags</li>
+                        <li className='text-base py-[16px]  px-[21px]  border-b border-secondary ease-in duration-100 text-tertiary text-opacity-[70%] hover:text-tertiary hover:bold hover:pl-[30px] hover:text-opacity-[100%]'>Home appliances</li>
                     </ul>
                     )
                    }
