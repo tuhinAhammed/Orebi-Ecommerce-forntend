@@ -75,8 +75,8 @@ const Header = () => {
                 
             </div>
             <div className='relative'>
-            <Search className="w-[500px] text-base font-dmSans rounded px-[21px] py-[16px] bg-[#eee]" placeholder="Search Products"></Search>
-             <IoSearch className="absolute top-5 right-5 text-primary"/>
+            <Search className="w-[500px] text-base font-dmSans rounded px-[21px] py-[16px] bg-[#eee] " placeholder="Search Products"></Search>
+             <IoSearch className="absolute top-5 right-5 text-primary cursor-pointer"/>
             </div>
             <div className='flex gap-[40px] items-center text-sm font-dmSans'>
             <div className='flex relative cursor-pointer' ref = {loginRef}>
