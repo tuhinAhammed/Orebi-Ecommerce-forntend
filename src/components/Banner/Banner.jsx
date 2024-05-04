@@ -31,6 +31,7 @@ const Banner = () => {
         </Flex>
         </Container>
     </div>
+
     </div>
   )
 }
