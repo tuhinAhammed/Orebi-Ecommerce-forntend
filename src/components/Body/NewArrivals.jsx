@@ -11,7 +11,7 @@ const NewArrivals = (badge) => {
         <div className="newArrived w-[100%]">
         <Container className="py-16">
             {/* <h1 className='text-4xl font-bold pb-10'>New Arrivals</h1> */}
-            <Title className="text-primary" title="New Arrivals"></Title>
+            <Title className="text-primary pb-10" title="New Arrivals"></Title>
             <div className="item">
                 <Flex className="justify-beetween gap-10 ">
                     <Product badge = {false}></Product>
