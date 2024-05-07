@@ -14,8 +14,6 @@ function App() {
     <>
      <Navbar></Navbar>
      <Header></Header>
-
-
     </>
   )
 }
