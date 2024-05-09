@@ -16,7 +16,6 @@ const Home = () => {
         <BestSellers></BestSellers> 
         <AdsSeconsd></AdsSeconsd>
         <SpeatialOffer></SpeatialOffer>
-        <Footer></Footer>
     </div>
   )
 }

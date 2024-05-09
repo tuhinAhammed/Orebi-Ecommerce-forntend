@@ -6,8 +6,8 @@ import { GiReturnArrow } from "react-icons/gi";
 import  Container  from '../Layout/Container';
 const Banner = () => {
   return (
-    <div>
-        <img src={BannerImg} alt="" />
+    <div className='w-full'>
+        <img className='w-full' src={BannerImg} alt="" />
     <div className="bg-quaternary ">
     <Container >
         <Flex className="information justify-between items-center py-[20px] ]">

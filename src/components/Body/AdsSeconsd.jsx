@@ -7,9 +7,9 @@ import Title from '../Layout/Title'
 const AdsSeconsd = () => {
   return (
     <>
-        <div className="adsSecond py-[60px]">
+        <div className="adsSecond py-[60px] ">
             <Container>
-                <Flex>
+                <Flex className="justify-between">
                     <div className="left">
                         <img src={adsSecond} alt="" />
                     </div>

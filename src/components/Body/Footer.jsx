@@ -10,7 +10,7 @@ const Footer = () => {
         <>
             <div className="footer py-12 text-primary bg-quaternary">
                 <Container className="">
-                    <Flex className="flex-start gap-32 ">
+                    <Flex className="justify-between gap-32 ">
                         <div className="menu">
                             <MinTitle className="pb-4" text="Menu"></MinTitle>
                             <ul>

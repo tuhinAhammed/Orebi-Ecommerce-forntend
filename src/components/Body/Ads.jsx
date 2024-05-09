@@ -7,8 +7,9 @@ import ads3 from "../../../src/assets/Ad_3.png"
 const Ads = () => {
   return (
     <>
+      <div className="add w-full">
       <Container className="pt-[120px] pb-[60px]">
-        <Flex className=" justify-center">
+        <Flex className="justify-between">
           <div  className='left '>
             <img  src={ads1} alt="" className=''/>
           </div>
@@ -18,6 +19,7 @@ const Ads = () => {
           </div>
         </Flex>
       </Container>
+      </div>
     </>
   )
 }
