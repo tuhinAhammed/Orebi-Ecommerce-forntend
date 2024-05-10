@@ -12,6 +12,9 @@ import {
 import RootLayout from './components/Layout/RootLayout.jsx';
 import Home from './components/pages/Home.jsx';
 import Shop from './components/pages/Shop.jsx';
+import ProductInside from './components/pages/ProductInside.jsx';
+import About from './components/pages/About.jsx';
+import Contacts from './components/pages/Contacts.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
@@ -20,6 +23,9 @@ const router = createBrowserRouter(
     >
         <Route index element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/product" element={<ProductInside />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/Contacts" element={<Contacts />} />
 
       
     </Route>

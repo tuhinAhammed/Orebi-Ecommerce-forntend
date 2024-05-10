@@ -8,7 +8,7 @@ import BreadCrums from '../Layout/BreadCrums'
 import Pagination from '../Layout/Pagination'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import CategorySidebar from '../Layout/LeftSidebar'
+import LeftSidebar from '../Layout/LeftSidebar'
 const Shop = () => {
     // url name Splited Here
     const pageName = window.location.pathname.split("/")[1]
@@ -38,8 +38,8 @@ const Shop = () => {
                     <div className="innerShop pt-6 ">
                         <Flex className="gap-10">
                             <div className="left w-[25%]">
-                            <BreadCrums></BreadCrums>
-                                <CategorySidebar></CategorySidebar>
+                                <BreadCrums></BreadCrums>
+                                <LeftSidebar></LeftSidebar>
                             </div>
                             <div className="right w-[75%]">
                                 <Flex className="justify-end gap-x-20 pb-14">
