@@ -19,7 +19,7 @@ function Items({ currentItems }) {
 }
 
 const Pagination = ({ itemsPerPage }) => {
-    const [itemOffset, setItemOffset] = useState(0);
+    const [itemOffset, setItemOffset] = useState("")
 
     const endOffset = itemOffset + itemsPerPage;
     console.log(`Loading items from ${itemOffset} to ${endOffset}`);
