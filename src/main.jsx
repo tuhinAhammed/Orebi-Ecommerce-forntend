@@ -16,6 +16,7 @@ import ProductInside from './components/pages/ProductInside.jsx';
 import About from './components/pages/About.jsx';
 import Contacts from './components/pages/Contacts.jsx';
 import Login from './components/pages/Login.jsx';
+import Signup from './components/pages/Signup.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
         <Route path="/about" element={<About />} />
         <Route path="/Contacts" element={<Contacts />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
       
     </Route>
