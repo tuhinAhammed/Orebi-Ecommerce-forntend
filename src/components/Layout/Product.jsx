@@ -28,9 +28,9 @@ const Product = ({ badge }) => {
                 }
                 <div className="productImage relative overflow-y-hidden ">
                     <img src={arrive1} alt="" className='w-full' />
-                    <div className="absolute activeButtons w-full bg-secondary p-4  bottom-50 left-0    group-hover:bottom-0">
+                    <div className="absolute activeButtons w-full bg-secondary p-4  bottom-50 left-0    group-hover:bottom-0  ">
                             <div className="mainActiveButtonsList ">
-                                <Flex className="innerActiveButtons my-2  justify-end gap-4 place-items-center text-tertiary text-base text-dmSans cursor-pointer  hover:font-bold ">
+                                <Flex className="innerActiveButtons my-2  justify-end gap-4 place-items-center text-tertiary text-base text-dmSans cursor-pointer  hover:font-bold transition-all duration-300">
                                     <h1 className="">Add to Wish List</h1>
                                     <FaHeart className={isAtiveWishList ? `isAtiveWishList text-primary` : `isAtiveWishList`} onClick={handleAddToWishList} />
                                 </Flex>
