@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-     <Navbar></Navbar>
-     <Header></Header>
+     {/* <Navbar></Navbar>
+     <Header></Header> */}
     </>
   )
 }
