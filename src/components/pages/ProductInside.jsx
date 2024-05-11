@@ -17,38 +17,42 @@ import Button from '../Layout/Button'
 import ProductDescription from '../Layout/ProductDescription'
 import ProductReview from './ProductReview'
 import AddReview from '../Layout/AddReview'
+import MinTitle from '../Layout/MinTitle'
 const ProductInside = () => {
-  return (
-    <>
-        <div className="product w-full">
-            <Container>
-                <BreadCrums className="py-10 "/>
-                <Flex className="productImage flex-wrap pb-14 ">
-                    <img src={image1} className="w-1/2" alt="" />
-                    <img src={image2} className="w-1/2" alt="" />
-                    <img src={image3} className="w-1/2" alt="" />
-                    <img src={image4} className="w-1/2" alt="" />
-                </Flex>
-                <Title title="Product"/>
-                <RatingCount className="py-6" ratignCount = "1"/>
-                <Price/>
-                <ProductColor className="py-6"/>
-                <ProductSize/>
-                <ProductQuantity className="py-6"/>
-                <ProductStock/>
-                <Flex className="py-6 gap-x-10">
-                    <Button text="Add to Wish List" className="text-primary bg-transparent border-2 border-primary "></Button>
-                    <Button text="Add to Cart" className="text-tertiary bg-primary border-2 border-primary "></Button>
-                </Flex>
-                <ProductDescription status = {false} summary = "FEATURES  & DETAILS" decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." className="py-6"/>
-                <ProductDescription status = {true}  summary = "SHIPPING & RETURNS" decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." className=""/>
-                <ProductReview className="py-6" count = "1"/>
-                <AddReview className="py-10"/>
-            </Container>
-        </div>
-    
-    </>
-  )
+    return (
+        <>
+            <div className="product w-full">
+                <Container>
+                    <BreadCrums className="py-10 " />
+                    <Flex className="productImage flex-wrap pb-14 ">
+                        <img src={image1} className="w-1/2" alt="" />
+                        <img src={image2} className="w-1/2" alt="" />
+                        <img src={image3} className="w-1/2" alt="" />
+                        <img src={image4} className="w-1/2" alt="" />
+                    </Flex>
+                    <Title title="Product" />
+                    <RatingCount className="py-6" ratignCount="1" />
+                    <Price />
+                    <ProductColor className="py-6" />
+                    <ProductSize />
+                    <Flex className="place-items-center gap-x-10">
+                        <MinTitle text="Quantity :"></MinTitle>
+                        <ProductQuantity className="py-6" />
+                    </Flex>
+                    <ProductStock />
+                    <Flex className="py-6 gap-x-10">
+                        <Button text="Add to Wish List" className="px-10 text-primary bg-transparent hover:bg-primary hover:text-tertiary "></Button>
+                        <Button text="Add to Cart" className="px-10 text-tertiary bg-primary hover:bg-transparent hover:text-primary"></Button>
+                    </Flex>
+                    <ProductDescription status={false} summary="FEATURES  & DETAILS" decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." className="py-6" />
+                    <ProductDescription status={true} summary="SHIPPING & RETURNS" decription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." className="" />
+                    <ProductReview className="py-6" count="1" />
+                    <AddReview className="py-10" />
+                </Container>
+            </div>
+
+        </>
+    )
 }
 
 export default ProductInside

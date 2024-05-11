@@ -8,11 +8,11 @@ const BreadCrums = ({className}) => {
 
     return (
         <div className={`${className}`}>
-            <Title title={pageName}></Title>
+            <Title className="capitalize" title={pageName}></Title>
             <Flex className="pageIntregate py-6 text-sm text-secondary font-light gap-3 items-center" >
-                <MinTitle text="Home" className="text-sm text-secondary font-light"></MinTitle>
+                <MinTitle text="Home" className="text-sm text-secondary font-light lowercase"></MinTitle>
                 <MdOutlineArrowForwardIos className="text-sm text-secondary font-light" />
-                <MinTitle text={pageName} className="text-sm text-secondary font-light"></MinTitle>
+                <MinTitle text={pageName} className="text-sm text-secondary font-light lowercase"></MinTitle>
 
             </Flex>
         </div>

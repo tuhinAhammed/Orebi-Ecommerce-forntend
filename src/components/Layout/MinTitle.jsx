@@ -1,8 +1,8 @@
 import React from 'react'
 
-const MinTitle = ({className , text}) => {
+const MinTitle = ({className , text }) => {
   return (
-<div className={`text-base font-bold font-dmSans uppercase ${className}`}>{text}</div>
+<div className={`text-base font-bold font-dmSans uppercase ${className}`} >{text}</div>
   )
 }
 

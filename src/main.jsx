@@ -17,6 +17,11 @@ import About from './components/pages/About.jsx';
 import Contacts from './components/pages/Contacts.jsx';
 import Login from './components/pages/Login.jsx';
 import Signup from './components/pages/Signup.jsx';
+import MyAccount from './components/pages/MyAccount.jsx';
+import Cart from './components/pages/Cart.jsx';
+import CartLayout from './components/Layout/CartLayout.jsx';
+import Checkout from './components/pages/Checkout.jsx';
+import Error from './components/pages/Error.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route
@@ -30,6 +35,11 @@ const router = createBrowserRouter(
         <Route path="/Contacts" element={<Contacts />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/myaccount" element={<MyAccount />} />
+        <Route path="/cart" element={<Cart />}/>
+        <Route path="/checkout" element={<Checkout />}/>
+        <Route path="/error" element={<Error />}/>
+
 
       
     </Route>
