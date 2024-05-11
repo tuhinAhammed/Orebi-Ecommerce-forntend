@@ -11,15 +11,15 @@ const About = () => {
     return (
         <div>
             <Container>
-                <BreadCrums className="py-10 " />
-                <Flex className="productImage flex-wrap pb-14 justify-center">
+                <BreadCrums className="py-10" />
+                <Flex className="productImage w-3/4 flex-wrap pb-14 justify-center place-content-center mx-auto">
                     <div className="card text-center w-1/2">
-                        <img src={about1} className="" alt="" />
-                        <Button text="Our Brands" className="bg-primary text-tertiary" />
+                        <img src={about1} className="w-full" alt="" />
+                        <Button text="Our Brands" className="px-20 bg-primary text-tertiary" />
                     </div>
                     <div className="card text-center w-1/2">
-                        <img src={about2} className="" alt="" />
-                        <Button text="Our Brands" className="bg-primary text-tertiary" />
+                        <img src={about2} className="w-full" alt="" />
+                        <Button text="Our Brands" className="px-20 bg-primary text-tertiary" />
                     </div>
                 </Flex>
                 <p className="py-6 text-secondary light font-dmSans w-1/2">Orebi is one of the world’s leading ecommerce brands and is internationally recognized for celebrating the essence of classic Worldwide cool looking style.</p>

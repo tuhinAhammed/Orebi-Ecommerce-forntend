@@ -24,7 +24,7 @@ const ProductInside = () => {
             <div className="product w-full">
                 <Container>
                     <BreadCrums className="py-10 " />
-                    <Flex className="productImage flex-wrap pb-14 ">
+                    <Flex className="productImage flex-wrap pb-14 w-3/4 m-auto">
                         <img src={image1} className="w-1/2" alt="" />
                         <img src={image2} className="w-1/2" alt="" />
                         <img src={image3} className="w-1/2" alt="" />
