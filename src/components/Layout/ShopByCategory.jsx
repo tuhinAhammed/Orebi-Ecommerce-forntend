@@ -4,50 +4,82 @@ import { IoMdArrowDropdownCircle } from "react-icons/io";
 import MinTitle from "./MinTitle"
 import CategoryDropdown from "./CategoryDropdown"
 import { useEffect } from 'react';
+import axios from "axios"
+const ShopByCategory = ({ dropdown, title, children }) => {
 
-const ShopByCategory = ({dropdown , title , children}) => {
-
-    const [dropdownShow , setDropdownShow] = useState(dropdown)
-    const [itemShow, setItemShow] = useState(true)
+    const [dropdownShow, setDropdownShow] = useState(dropdown)
+    const [itemShow, setItemShow] = useState(dropdown)
     const handleDropdown = () => {
         setItemShow(!itemShow)
     }
 
     // get categoryName from Database
+
+    const [categoryData, setCategoryData] = useState([])
     useEffect(() => {
-        
-    })
+        async function allCategory() {
+            const data = await axios.get("http://localhost:4000/auth/v1/category/get/category")
+            setCategoryData(data.data);
+        }
+        allCategory()
+    }, [])
+
     return (
-        <div className='list-none text-base text-secondary font-dm-Sans py-2'>
+
+        <div className='list-none text-base text-secondary font-dm-Sans py-2 '>
             {
                 dropdownShow ?
-                <Flex className=" justify-between place-items-center">
-                <p className='text-base font-bold font-dmSans capitalize text-primary'>{title}</p>
-                <IoMdArrowDropdownCircle onClick={handleDropdown} className='cursor-pointer' />
-            </Flex>
+                    <Flex className=" justify-between place-items-center">
+                        <p className='text-base font-bold font-dmSans capitalize text-primary'>{title}</p>
+                        <IoMdArrowDropdownCircle onClick={handleDropdown} className='cursor-pointer' />
+                    </Flex>
 
-                : <p className='text-base font-bold font-dmSans capitalize text-primary'>{title}</p>
+                    : <p className='text-base font-bold font-dmSans capitalize text-primary'>{title}</p>
 
             }
 
             {
                 itemShow && (
-                <ul className='mt-1'>
-                    <li> <CategoryDropdown  categoryDropdown={true} className="" title ="category-1"/></li>                    
-                    <li> <CategoryDropdown categoryDropdown={false} className="" title ="category-2"/> </li>
-                    <li> <CategoryDropdown categoryDropdown={true} className="" title ="category-3"/> </li>
-                    <li> <CategoryDropdown categoryDropdown={false} className="" title ="category-4"/> </li>
-                </ul> 
-            )}
+                    <div className='mt-1 '>
+                        {
+                            categoryData.map((items) => (
+                                <>
+                                    <CategoryDropdown categoryDropdown={true} className="border-b-2 border-quaternary" title={items.name} >
+                                        {
+                                            items.subCategory.map((subCategoryName) => (
+
+                                                <p className='border-t-2 border-quaternary ml-4 py-2'>{subCategoryName.name}</p>
+                                            ))
+                                        }
+                                        {/* <p className='border-t-2 border-quaternary ml-4 py-2'>demo</p>
+                                        <p className='border-t-2 border-quaternary ml-4 py-2'>demo</p> */}
+                                    </CategoryDropdown>
+                                </>
+                            ))
+                        }
+                    </div>
+                )}
             {
                 dropdownShow == false && (
-                <ul className='mt-1'>
-                    <li> <CategoryDropdown  categoryDropdown={true} className="" title ="category-1"/></li>                    
-                    <li> <CategoryDropdown categoryDropdown={false} className="" title ="category-2"/> </li>
-                    <li> <CategoryDropdown categoryDropdown={true} className="" title ="category-3"/> </li>
-                    <li> <CategoryDropdown categoryDropdown={false} className="" title ="category-4"/> </li>
-                </ul> 
-            )}
+                    <div className='mt-1'>
+                    {
+                            categoryData.map((items) => (
+                                <>
+                                    <CategoryDropdown categoryDropdown={true} className="border-b-2 border-quaternary" title={items.name} >
+                                        {
+                                            items.subCategory.map((subCategoryName) => (
+
+                                                <p className='border-t-2 border-quaternary ml-4 py-2'>{subCategoryName.name}</p>
+                                            ))
+                                        }
+                                        {/* <p className='border-t-2 border-quaternary ml-4 py-2'>demo</p>
+                                        <p className='border-t-2 border-quaternary ml-4 py-2'>demo</p> */}
+                                    </CategoryDropdown>
+                                </>
+                            ))
+                        }
+                </div>
+                )}
         </div>
     )
 }

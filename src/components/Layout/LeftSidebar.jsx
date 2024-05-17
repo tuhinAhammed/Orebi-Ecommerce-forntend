@@ -13,7 +13,7 @@ const LeftSidebar = () => {
     <> 
     {/* Shop By Category Here */}
         
-        <ShopByCategory dropdown = {true} title = "Shop by Category"></ShopByCategory>
+        <ShopByCategory dropdown = {false} title = "Shop by Category"></ShopByCategory>
         <ShopByColor dropdown = {true}  title = "Color"></ShopByColor>
         <ShopByBrand dropdown = {true}  title = "Shop by Brand"></ShopByBrand>
         <ShopByPrice dropdown = {true}  title = "Shop By Price"></ShopByPrice>
