@@ -3,14 +3,20 @@ import Flex from "./Flex"
 import { IoMdArrowDropdownCircle } from "react-icons/io";
 import MinTitle from "./MinTitle"
 import CategoryDropdown from "./CategoryDropdown"
+import { useEffect } from 'react';
 
 const ShopByCategory = ({dropdown , title , children}) => {
 
     const [dropdownShow , setDropdownShow] = useState(dropdown)
-    const [itemShow, setItemShow] = useState(dropdown)
+    const [itemShow, setItemShow] = useState(true)
     const handleDropdown = () => {
         setItemShow(!itemShow)
     }
+
+    // get categoryName from Database
+    useEffect(() => {
+        
+    })
     return (
         <div className='list-none text-base text-secondary font-dm-Sans py-2'>
             {

@@ -14,27 +14,24 @@ const Shop = () => {
     const pageName = window.location.pathname.split("/")[1]
     console.log(pageName);
 
-        // product SHORT BY handleShort
-        const [productShow , setProductShow] = useState(12)
+    // product SHORT BY handleShort
+    const [productShow, setProductShow] = useState(12)
 
-        useEffect(() => {
-            
-        }, [productShow])
+    useEffect(() => {
 
-        const handleShort = (e) => {
-            setProductShow(+e.target.value);
+    }, [productShow])
 
-        }
+    const handleShort = (e) => {
+        setProductShow(+e.target.value);
+    }
 
     return (
-
-
 
         <>
             <div className="breadcrums py-6">
                 <Container>
 
-                    
+
                     <div className="innerShop pt-6 ">
                         <Flex className="gap-10">
                             <div className="left w-[25%]">

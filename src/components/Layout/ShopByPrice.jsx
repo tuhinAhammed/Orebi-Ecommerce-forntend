@@ -8,7 +8,7 @@ import CategoryDropdown from "./CategoryDropdown"
 const ShopByPrice = ({ dropdown, title, children }) => {
 
     const [dropdownShow, setDropdownShow] = useState(dropdown)
-    const [itemShow, setItemShow] = useState(dropdown)
+    const [itemShow, setItemShow] = useState(false)
     const handleDropdown = () => {
         setItemShow(!itemShow)
     }

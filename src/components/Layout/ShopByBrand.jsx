@@ -5,7 +5,7 @@ import Flex from "./Flex"
 import CategoryDropdown from "./CategoryDropdown"
 const ShopByBrand = ({title , dropdown }) => {
     // color Dropdown Show State
-    const [showColorDropdown , setShowColorDropdown] = useState(dropdown)
+    const [showColorDropdown , setShowColorDropdown] = useState(false)
     const [dropdownArrowShow , setDropdownArrowShow] = useState(dropdown)
   return (
     <div className='list-none text-base text-secondary font-dm-Sans py-2'>
