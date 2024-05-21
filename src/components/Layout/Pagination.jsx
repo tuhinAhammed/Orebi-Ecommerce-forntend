@@ -1,38 +1,51 @@
 import React, { useEffect, useState } from 'react';
-
 import ReactPaginate from 'react-paginate';
 import Product from "../Layout/Product"
 import Flex from '../Layout/Flex';
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
-function Items({ currentItems }) {
-    return (
-        <>
-            {currentItems &&
-                currentItems.map((item) => (
-                    <div className='w-[32%]'>
-                        <Product badge={true}></Product>
-                    </div>
-                ))}
-        </>
-    );
-}
+import axios from 'axios';
 
 const Pagination = ({ itemsPerPage }) => {
+    const [productData , setProductData] = useState([])
+    // get Product from database
+    useEffect(() => {
+      async  function getProductData(){
+            const data = await axios.get("http://localhost:4000/auth/v1/product/getproduct")
+            setProductData(data.data);
+        }
+        getProductData()
+    },[])
+
+    const items = productData;
+
+    function Items({ currentItems }) {
+        return (
+            <>
+
+                {currentItems &&
+                    currentItems.map((item) => 
+                    (
+                        <div className='w-[32%]'>
+                            <Product badge={true} productImage = {item.image} productPrice = {item.variants.map((variant) => (variant.price))} productColor= {item.variants.map((variant) => (variant.color))} productName ={item.name}/>
+                        </div>
+                    ))
+                }
+            </>
+        )
+    }
     const [itemOffset, setItemOffset] = useState("")
 
     const endOffset = itemOffset + itemsPerPage;
-    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
     const currentItems = items.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(items.length / itemsPerPage);
-    const [selectedItems , setSelectedItems] = useState(0)
+    const [selectedItems, setSelectedItems] = useState(0)
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % items.length;
         console.log(
             `User requested page number ${event.selected}, which is offset ${newOffset}`
         );
         setSelectedItems(event.selected)
-        console.log("p" , selectedItems);
+        console.log("p", selectedItems);
         setItemOffset(newOffset);
     };
     return (
@@ -59,7 +72,7 @@ const Pagination = ({ itemsPerPage }) => {
                     previousLabel="< previous"
                     renderOnZeroPageCount={null}
                 />
-            <p className='text-secondary text-sm font-dmSans '>Products from {selectedItems + 1}  to {itemOffset + itemsPerPage} of {items.length}</p>
+                <p className='text-secondary text-sm font-dmSans '>Products from {selectedItems + 1}  to {itemOffset + itemsPerPage} of {items.length}</p>
             </Flex>
         </div>
     )
