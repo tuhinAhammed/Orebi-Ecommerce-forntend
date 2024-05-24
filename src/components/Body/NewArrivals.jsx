@@ -38,13 +38,13 @@ const NewArrivals = ({badge }) => {
         <Container className="py-16">
           {/* <h1 className='text-4xl font-bold pb-10'>New Arrivals</h1> */}
           <Title className="text-primary pb-10" title="New Arrivals"></Title>
-          <div className="item w-[100%] " >
+          <div className="item w-[100%] mx-20" >
 
             <Slider {...settings} className="flex gap-x-6 ">
             {/* <Flex className=" "> */}
             {
               productData.map((product) => (
-                <Product badge={true} productImage = {product.image} productPrice = {product.variants.map((variant) => (variant.price))} productColor= {product.variants.map((variant) => (variant.color))} productName ={product.name} className="mx-20"/>
+                <Product badge={true} productImage = {product.image} productPrice = {product.variants.map((variant) => (variant.price))} productColor= {product.variants.map((variant) => (variant.color))} productName ={product.name} className=""/>
               ))
             }
 

@@ -40,7 +40,7 @@ const Product = ({ badge, productImage, productName, productColor, productPrice 
                     badge &&
                     <Badge title="New" />
                 }
-                <div className="productImage relative overflow-y-hidden w-[250px] h-[250px]">
+                <div className="productImage relative overflow-y-hidden w-[250px] h-[250px] ">
                     <img src={productImage} alt="" className='w-full' />
                     <div className="absolute activeButtons w-full bg-secondary p-4  bottom-[-60%] left-0 overflow-hidden   group-hover:bottom-0  ">
                         <div className="mainActiveButtonsList ">
